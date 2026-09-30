@@ -1,0 +1,15 @@
+# личные данные — не публиковать
+blocklist.json
+
+# сборка
+build/
+dist/
+Portable/
+*.spec
+*.exe
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
