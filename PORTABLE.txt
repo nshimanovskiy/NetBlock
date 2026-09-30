@@ -1,0 +1,20 @@
+NetBlock - portable version
+===========================
+
+Launch: NetBlock.exe (asks for administrator rights).
+Files: NetBlock.exe + blocklist.json (created next to the exe on first change).
+Copy the whole folder anywhere (flash drive, another PC) - the list goes with it.
+
+- Closing the window hides the app to the tray (near the clock).
+- Tray menu:
+    "Exit (blocks stay)"   - app closes, blocks stay until reboot/next launch
+    "Remove all and exit"  - removes hosts entries, firewall rules and routes
+- "Run with Windows" checkbox creates a Task Scheduler job. If you move the exe,
+  just launch it once from the new place - the job path is updated automatically.
+- Only one copy can run at a time.
+
+Notes:
+- Domains: hosts file (browser DNS-over-HTTPS must be off).
+- IPs: Windows Firewall + blackhole routes (IPv4). Third-party firewalls
+  (e.g. Kaspersky) may ignore Windows Firewall rules; routes still work.
+- Antivirus may need an exception for NetBlock.exe to edit the hosts file.
